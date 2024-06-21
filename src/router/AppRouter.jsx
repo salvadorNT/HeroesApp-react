@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 
 import { HeroesRoutes } from "../heroes";
 import { LoginPage } from "../auth";
@@ -10,6 +10,7 @@ export const AppRouter = () => {
             <Routes>
                 <Route path="login" element={<LoginPage />} />
                 <Route path="heroes/*" element={<HeroesRoutes />} />
+                <Route path="/*" element={<Navigate to={'/login'} />} />
             </Routes>
         </>
     )
