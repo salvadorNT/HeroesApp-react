@@ -22,6 +22,8 @@ describe('Pruebas en <Navbar/>', () => {
         logout: jest.fn()
     }
 
+    beforeEach(() => jest.clearAllMocks() );
+
     test('debe de mostrar el nombre del usuario autenticado', () => {
 
 
